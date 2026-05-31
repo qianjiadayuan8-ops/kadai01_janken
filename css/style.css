@@ -1,0 +1,166 @@
+/* リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: linear-gradient(to bottom, #f5f6fb, #eceef6);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2f3445;
+}
+
+/* 全体カード */
+.desk {
+  width: 390px;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(8px);
+  border-radius: 28px;
+  padding: 30px 24px 18px;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* タイトル */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-sub {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.title-main {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+/* 相手カード */
+.opponent {
+  width: 170px;
+  height: 240px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #e7ebff, #d8ddf5);
+  border: 5px solid rgba(255,255,255,0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.12),
+    inset 0 0 0 3px rgba(255,255,255,0.45);
+
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* カード模様 */
+.opponent::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.18) 1px, transparent 1px);
+  background-size: 12px 12px;
+  opacity: 0.8;
+}
+
+.opponent-text {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* ボタン */
+.player {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.curd {
+  width: 102px;
+  height: 132px;
+  border: none;
+  border-radius: 22px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  transition: 0.2s;
+  box-shadow:
+    0 6px 12px rgba(0,0,0,0.12),
+    inset 0 -6px 0 rgba(0,0,0,0.08);
+
+  color: white;
+}
+
+.curd:hover {
+  transform: translateY(-6px);
+}
+
+.curd:active {
+  transform: translateY(2px);
+}
+
+.hand {
+  font-size: 48px;
+}
+
+.hand-name {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+/* 色 */
+.gu {
+  background: linear-gradient(to bottom, #ff8b6c, #f2674a);
+}
+
+.choki {
+  background: linear-gradient(to bottom, #ffd36d, #f6b93d);
+}
+
+.pa {
+  background: linear-gradient(to bottom, #69a9ff, #3f83f8);
+}
+
+/* コメント */
+.comment {
+  width: 100%;
+  background: #e7e8ef;
+  border-radius: 999px;
+  padding: 16px 30px;
+  text-align: center;
+}
+
+.text {
+  color: #555d73;
+  font-size: 22px;
+  font-weight: 700;
+  white-space: pre-line;
+  text-align: left;
+}
